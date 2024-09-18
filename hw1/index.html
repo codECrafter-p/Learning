@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .father{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .son{
+            background-color: purple;
+            padding: 30px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            color: white;
+        }
+        input{
+            padding: 5px 10px;
+            font-size: 20px;
+            margin-top: 5px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: 5px;
+            border-radius: 10px;
+
+        }
+        #cal{
+            border-radius:15px ;
+            font-weight: bold;
+            color: purple;
+            margin-top: 10px;
+           margin-left: 80px;
+           margin-bottom: 10px;
+        }
+        h1{
+            margin-bottom: 20px;
+
+        }
+        h1,h2{
+            text-align: center;
+            color: white;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+            <h1>CALCULATE %</h1>
+            <label for="">Enter total marks</label>
+            <br>
+            <input type="text" placeholder="total marks" id="marks">
+            <br>
+            <label for="">Enter no of subjects</label>
+            <br>
+            <input type="text" placeholder="no. of subjects" id="sub">
+            <br>
+            <input type="submit" id="cal" value="Calculate" onclick="percentage()">
+            <h2 id="res">Result</h2>
+        </div>
+    </div>
+
+    <script>
+        function percentage(){
+
+           var a= parseFloat(document.getElementById('marks').value);
+           var b= parseFloat(document.getElementById('sub').value);
+           var c=a/b;
+
+           document.getElementById("res").innerHTML="Result=" + c + "%" ;
+        }
+    </script>
+</body>
+</html>
